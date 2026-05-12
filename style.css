@@ -1,3 +1,20 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+
+    background-color: #09212A; 
+}
+
 #photo_gallery{
     width: 150px;
     height: 150px;
