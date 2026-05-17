@@ -19,6 +19,8 @@
 
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 
@@ -26,14 +28,13 @@
 
 body {
 
-    display: flex;
-    flex-direction: column;
+    background-color: #06171E;
+    color: white;
 }
 main{
     gap: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #06171E;
 }
@@ -43,28 +44,141 @@ h1{
     font-size: 56px;
     font-weight: 800;
     color: #FFFFFF;
+    text-align: center;
 }
 
 header{
 
     background-color: #09212A; 
+    padding-top :20px;
+    padding-bottom: 20px;
+    padding-left: 140px;
 }
 
 #photo_gallery{
     
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
-    justify-content: flex-start;
-    align-items: center;
     padding: 0 12px 0 12px;
+    width: 100%;
+}
+.photo{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px;
 }
 #photo img{
 
-    width: 150px;
-    height: 150px;
-    border-radius: 16px;
-    border: 2px;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.2s ease;
 
+}
+
+.photo img:hover {
+
+    transform: scale(1.05);
+}
+
+#photo_dialog {
+    border: none;
+    margin: auto;
+    border-radius: 12px;
+    padding: 150px 64px;
+    position: relative;
+    background-color: #0D2731;
+}
+
+.dialog_header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+    color: white;
+}
+
+#dialog_title {
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#photo_dialog::backdrop {
+
+    background: rgba(0, 0, 0, 0.85);
+}
+
+#dialog_image {
+    width: 560px;
+    height: 375px;
+    object-fit: cover;
+    display: block;
+    
+
+}
+
+.dialog_navigation {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    margin-top: 32px;
+    color: red;
+}
+
+.dialog_navigation button {
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dialog_navigation button img{
+
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    color: #FD5B4F ;
+}
+.dialog_navigation button img:hover{
+    transform: scale(1.2);
+    transition: 0.2s;
+
+}
+
+#photo_counter {
+
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+.close_button {
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close_button img{
+
+    width: 24px;
+    height: 24px;
+    display:block ;
+    color: white;
+}
+.close_button img:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
 }

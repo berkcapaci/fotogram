@@ -14,10 +14,29 @@
       <section>
         <h1>Your personal photo album</h1>
       </section>
-      <section id="photo_gallery">
-        <div id="photo"${i}></div>
-      </section>
+      <section id="photo_gallery"></section>
     </main>
+    <dialog id="photo_dialog">
+      <div class="dialog_header">
+        <h2 id="dialog_title"></h2>
+        <button
+          class="close_button"
+          onclick="closeDialog()"
+          aria-label="Close dialog"
+        >
+          <img src="/assets/icons/close.png" alt="Close">
+        </button>
+      </div>
+      <img id="dialog_image" src="" alt="Expanded photo" />
+      <div class="dialog_navigation">
+        <button onclick="previousPhoto()"> <img src="/assets/icons/arrow_left.png" alt="Previous photo"></button>
+
+        <span id="photo_counter"></span>
+
+        <button onclick="nextPhoto()"> <img src="/assets/icons/arrow_right.png" alt="Next photo"></button>
+      </div>
+    </dialog>
+
     <footer></footer>
   </body>
   <script src="/script.js"></script>
