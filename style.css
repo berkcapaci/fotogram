@@ -15,9 +15,6 @@
   src: url('..//fotogram/assets/fonts/figtree-v9-latin/figtree-v9-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -25,11 +22,11 @@
     scroll-behavior: smooth;
 
 }
-
 body {
 
     background-color: #06171E;
     color: white;
+    gap: 160px;
 }
 main{
     gap: 80px;
@@ -39,24 +36,19 @@ main{
     background-color: #06171E;
 }
 h1{
-
     font-family: 'Figtree';
     font-size: 56px;
     font-weight: 800;
     color: #FFFFFF;
     text-align: center;
 }
-
 header{
-
     background-color: #09212A; 
     padding-top :20px;
     padding-bottom: 20px;
     padding-left: 140px;
 }
-
 #photo_gallery{
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -72,21 +64,16 @@ header{
     border: 2px;
 }
 #photo img{
-
     width: 100%;
     height: 100%;
     object-fit: contain;
     cursor: pointer;
     display: block;
     transition: transform 0.2s ease;
-
 }
-
 .photo img:hover {
-
     transform: scale(1.05);
 }
-
 #photo_dialog {
     border: none;
     margin: auto;
@@ -95,38 +82,27 @@ header{
     position: relative;
     background-color: #0D2731;
 }
-
 .dialog_header {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 48px;
     color: white;
 }
-
 #dialog_title {
-
     font-size: 32px;
     font-weight: 800;
 }
-
 #photo_dialog::backdrop {
-
     background: rgba(0, 0, 0, 0.85);
 }
-
 #dialog_image {
     width: 560px;
     height: 375px;
     object-fit: cover;
     display: block;
-    
-
 }
-
 .dialog_navigation {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,17 +110,13 @@ header{
     margin-top: 32px;
     color: red;
 }
-
 .dialog_navigation button {
-
     border: none;
     background: transparent;
     cursor: pointer;
     padding: 0;
 }
-
 .dialog_navigation button img{
-
     width: 60px;
     height: 60px;
     border-radius: 100px;
@@ -153,26 +125,19 @@ header{
 .dialog_navigation button img:hover{
     transform: scale(1.2);
     transition: 0.2s;
-
 }
-
 #photo_counter {
-
     font-size: 20px;
     font-weight: 800;
     color: white;
 }
-
 .close_button {
-
     border: none;
     background: transparent;
     cursor: pointer;
     padding: 0;
 }
-
 .close_button img{
-
     width: 24px;
     height: 24px;
     display:block ;
@@ -181,4 +146,23 @@ header{
 .close_button img:hover {
     transform: scale(1.1);
     transition: 0.2s;
+}
+.footer{
+    background-color: #09212A;
+    gap: 16px;
+    text-align: center;
+}
+.footer_brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 46px ;
+}
+.footer_copyright{
+    font-family: 'Figtree';
+    font-size: 14px;
+    font-weight: 400;
+    color:  #99ACB3;
+    align-content: center;
 }
